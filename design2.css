@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #FFf;
+    font-size:16px;
+    color: #777;
+}
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  /*background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);*/
+  background-color: #FFB900;
+  opacity: 0.8;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+  font-family: 'Stylish', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #000;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  padding-top: 20px;
+  padding-left: 40px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.menubtn {
+  padding-top: 20px;
+  padding-left: 40px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffb900;
+  background-color: #fff;
+}
+
+.menubtn > span > i {
+  color: #000;
+}
+
+.menubtn > span:hover {
+  color: #000;
+}
+
+
+#login-box{
+    position: relative;
+    margin: 5% auto;
+    height: 400px;
+    width: 600px;
+    background: transparent;
+    z-index: 1;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);*/
+    border-radius: 20px;
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+
+    
+}
+.left-box{
+    position: absolute;
+    top:0;
+    left:0;
+    box-sizing: border-box;
+    padding: 40px;
+    width:300px;
+    height: 400px;
+    /* opacity: 5.0; */
+    color: #000;
+}
+h1{
+    margin: 0 0 20px 0;
+    font-weight : 300;
+    font-size: 28px;
+}
+input[type="text"], 
+input[type="password"]
+{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding:4px;
+    width: 220px;
+    height:32px;
+    border:none;
+    outline:none;
+    border-bottom: 1px solid #aaa;
+    font-family: sans-sarif;
+    font-weight: 400;
+    font-size:15px;
+    transition: 2s ease;
+
+}
+input[type="submit"]{
+    margin-botton:28px;
+    width:120px;
+    height:32px;
+    background:#f44336;
+    border:none;
+    border-radius: 2px;
+    color:#FFF;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform:uppercase;
+    transition:2s ease;
+    cursor: pointer;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus
+{
+    background: #000;
+    transition: 2s ease;
+}
+.right-box{
+    position: absolute;
+    top:0;
+    right:0;
+    box-sizing: border-box;
+    padding-top: 75px;
+    padding-left: 40px;
+    width: 300px;
+    height: 400px;
+    /* background-image:url(bgc.jpg); */
+    background: transparent;
+    
+    background-size:cover;
+    background-position:center;
+}
+.or{
+    position:absolute;
+    top:170px;
+    left: 280px;
+    width: 40px;
+    height: 40px;
+    background: #efefef;
+    border-radius:50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0 ,0.6);
+    line-height: 40px;
+    text-align: center;
+   
+
+}
+.right-box .signinwith{
+    display: block;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color:  28px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+
+
+}
+button.social{
+    margin-bottom: 20px;
+    width:220px;
+    height:36px;
+    border: none;
+    border-radius:2px;
+    color:#fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    transition: 2s ease;
+    cursor: pointer;
+}
+.facebook{
+    background-color:#32508e;
+}
+.twitter{
+    background-color:#55acee;
+
+}
+.google{
+    background-color:#dd4b39;
+}
+
+.heading2 {
+  font-family: 'Stylish', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: #FFB900;
+}
+.img1 {
+  position: absolute;
+  top: 10%;
+}
+.img1 > img {
+  width: 300px;
+  height: auto;
+}
+
+.img2 {
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+}
+.img2 > img {
+  width: auto;
+  height: auto;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
